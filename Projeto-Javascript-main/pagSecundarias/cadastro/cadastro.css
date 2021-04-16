@@ -1,0 +1,226 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  background-image: url('../../imagens/Design.png');
+  margin: 0;
+  padding: 0;
+}
+
+/* Códigos das cores */
+
+/* #0003FF - azul escuro 
+#FE82A7 - rosa claro
+#FFDF2B - amarelo
+#79FFA0 -verde clarinho */
+
+/* 
+----------------------------------------------- 
+-----------------------------------------------
+---------- Estilização página cadastro --------
+-----------------------------------------------
+-----------------------------------------------
+*/
+
+/* 
+-----------Link para ir para a página inicial--------
+*/
+
+#pagInicial {
+  background-color: #79ffa0;
+  position: absolute;
+  display: flex;
+  width: 100px;
+  height: 25px;
+  padding-left: 5px; 
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(26, 25, 25);
+  margin-top: -80px;
+  
+  border-bottom-right-radius: 30px;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#pagInicial:hover {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgb(16, 16, 17);
+}
+
+/* 
+-----------Fim Link para ir para a página inicial-----
+*/
+
+/* 
+-----------Estilização do formulário-----
+*/
+
+.container {
+  width: 30%;
+  height: 500px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+/* 
+-----------Estilização do campos formulário-----
+*/
+
+input,
+select,
+button {
+  padding: 8px;
+  margin: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* 
+-----------Fim Estilização do campos formulário-----
+*/
+
+/* 
+-----------Estilização do campo de nome-----
+*/
+
+#primeiraCamada input {
+  width: 60%;
+}
+
+#primeiraCamada label {
+  width: 60%;
+  margin: 10px;
+}
+
+/* 
+-----------Fim da estilização do campo de nome-----
+*/
+
+/* 
+-----------Estilização do campo de sexo-----
+*/
+
+#primeiraCamadaB label {
+  width: 60%;
+  margin: 10px;
+}
+
+#primeiraCamadaB select {
+  margin-left: 5%;
+  width: 30%;
+}
+
+/* 
+-----------Fim da estilização do campo de sexo-----
+*/
+
+/* 
+----------- Estilização do campo de CPF-----
+*/
+
+#segundaCamada input {
+  margin-left: 6%;
+  width: 60%;
+}
+
+#segundaCamada label {
+  width: 60%;
+  margin: 10px;
+}
+
+/* 
+----------- Fim da estilização do campo de CPF-----
+*/
+
+/* 
+-----------Estilização do campo de dia, mes, ano-----
+*/
+
+
+#terceiraCamada input {
+  margin: 10px;
+  width: 18%;
+}
+
+#terceiraCamada label {
+  width: 90%;
+  margin: 10px;
+}
+
+#terceiraCamada select {
+  width: 33%;
+}
+
+/* 
+-----------Fim da estilização do campo de dia, mes, ano-----
+*/
+
+/* 
+-----------Estilização do campo de email-----
+*/
+
+
+#quartaCamada input {
+  width: 90%;
+}
+
+#quartaCamada label {
+  width: 90%;
+  margin: 10px;
+}
+
+/* 
+-----------Fim da Estilização do campo de email-----
+*/
+
+/* 
+-----------Estilização do botão de cadastramento-----
+*/
+
+#divDoBotao button {
+  text-align: center;
+  width: 40%;
+  cursor: pointer;
+  margin: 10px 30%;
+}
+
+#divDoBotao button:hover {
+  background-color: #ffdf2b;
+}
+
+/* 
+-----------Fim Estilização do botão de cadastramento-----
+*/
+
+/* 
+-----------Estilização da div em que vai aparecer o texto para o usuário-----
+*/
+
+.resposta {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+/* 
+----------- Fim Estilização da div em que vai aparecer o texto para o usuário-----
+*/
+
+/* 
+----------------------------------------------- 
+-----------------------------------------------
+---------- Estilização página cadastro --------
+-----------------------------------------------
+-----------------------------------------------
+*/

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Com91.071tible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conversor de Moedas</title>
+        <script src="currency.js"></script>
+        <link rel="stylesheet" href="currency.css" />
+    </head>
+    <!-- 4. 91.071gina Currency
+A.Criar uma pagina de conversão de moedas
+B.Utilizar as moedas (dólar americano , dólar canadense , Real brasileiro , euro , Libra e peso argentino
+C. Considerar mercado comercial fechamento dia 16/03/2021
+D. Usuário não pode digitar numero negativo ou letras em caso de erro de digitação enviar um alert
+1 dolar = 5,619 reais
+1 dolar = 0,840 euro
+1 dolar = 0,720 libra
+1 dolar = 91,071 Peso Argentino
+1 dolar = 1,244 dolar canadense
+-->
+
+    <body>
+        
+
+        <main>
+
+        <div id="div-section">
+            <section id="botao-section">
+            <a id="botao-pagina-inicial" href="../../homeF.html">Retornar</a>
+        </section>
+        </div>
+
+        <div id="texto">
+            <h1>Conversor de Moedas</h1>
+            <p >O Conversor de Moedas FinanceOne para<br> conversões entre 6 tipos de moedas de <br>diferentes países com base em dados diários fornecidos pelo  Banco Central do Brasil.</p>
+            
+            <div id="img-money-div"><img id="img-money" src="../../imagens/money.svg"></div> <!-- mudei o endereço da imagem-->
+     
+        </div>
+
+        <div id="caixa">  
+            <label id="label1" for="">Valor a ser Convertido</label>
+            <input id="entrada" class="bordas" type="text" placeholder="Digite o valor" />
+            <hr>
+            <label for="">De: </label>           
+            <select name="Moeda" id="de" class="bordas">
+                <option value="br">Real Brasileiro</option>
+                <option value='dl'>Dólar Americano</option>
+                <option value="dc">Dólar Canadense</option>              
+                <option value="eu">Euro</option>
+                <option value="lb">Libra</option>
+                <option value="pa">Peso Argentino</option>
+            </select>
+            <label for="">Para: </label>           
+            <select name="Moeda" id="para" class="bordas">
+                <option value="br">Real Brasileiro</option>
+                <option value="dl">Dólar Americano</option>
+                <option value="dc">Dólar Canadense</option>               
+                <option value="eu">Euro</option>
+                <option value="lb">Libra</option>
+                <option value="pa">Peso Argentino</option>
+            </select>
+            <br>
+
+            <button type="button" onclick="conveteMoeda()" class="botao">Converter</button>
+           
+        </div>
+
+        
+        
+    </main>
+    </body>
+</html>

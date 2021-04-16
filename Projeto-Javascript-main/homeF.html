@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina Principal</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-image: url(imagens/Design.png);
+        height: fit-content;
+      }
+
+      #titulo {
+        margin-left: 120px;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #tituloAcessibilidade {
+        margin-left: 120px;
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #texto {
+        margin-top: 180px;
+        margin-bottom: 20px;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #textoAcessibilidade {
+        margin-top: 200px;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #tituloh2 {
+        margin-top: -70px;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        font-size: 28px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #tituloh2Acessibilidade {
+        text-align: justify;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        font-size: 56px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #titulo2 {
+        margin-top: 100px;
+        margin-left: 80px;
+      }
+
+      .primeira {
+        padding: 20px;
+        margin-left: 390px;
+      }
+
+      .primeiraAcessibilidade {
+        padding: 20px;
+        margin-left: 200px;
+      }
+
+      #divP {
+        margin-top: -130px;
+      }
+
+      .button {
+        border-radius: 35px;
+        margin-left: -10px;
+        background-color: rgb(220, 255, 22);
+        margin: 10px;
+        height: 50px;
+        width: 220px;
+        border: none;
+        box-shadow: 1px 1px 5px rgb(17, 17, 17);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .buttonAcessibilidade {
+        border-radius: 35px;
+        margin-left: -10px;
+        background-color: rgb(220, 255, 22);
+        margin: 10px;
+        height: 70px;
+        width: 240px;
+        border: none;
+        box-shadow: 1px 1px 5px rgb(17, 17, 17);
+        font-size: 36px;
+        font-weight: bold;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .button:hover {
+        background-color: rgb(22, 22, 22);
+        color: rgb(255, 255, 255);
+      }
+
+      .buttonAcessibilidade:hover {
+        background-color: rgb(22, 22, 22);
+        color: rgb(255, 255, 255);
+      }
+
+      #img-moeda {
+        height: 55px;
+        width: auto;
+        margin: 20px 90px;
+      }
+
+      .crop {
+        clip: rect(15px, 10px, 10px, 0px);
+      }
+
+      #acess {
+        position: relative;
+        top: -60px;
+        background-color: #79ffa0;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        border: none;
+        box-shadow: 1px 1px 10px rgb(47, 47, 47);
+      }
+
+      #acess:hover {
+        background-color: rgb(220, 255, 22);
+      }
+
+      #acess1 {
+        margin-left: 1250px;
+        margin-top: -20px;
+      }
+
+      .estilo1 {
+        background-image: url(imagens/layout4.png);
+        height: fit-content;
+      }
+
+      .estilo-reset {
+        background-image: url(imagens/Design.png);
+        height: fit-content;
+      }
+
+      #botao-layout2 {
+        margin-left: 1100px;
+      }
+
+      .layout-button {
+        width: 110px;
+        height: auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        border: none;
+        background-color: #79ffa0;
+        font-weight: bold;
+        color: rgb(5, 5, 5);
+        border-bottom-left-radius: 15px;
+      }
+
+      .layout-buttonAcessibilidade {
+        width: 110px;
+        height: auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        border: none;
+        font-size: 25px;
+        background-color: #79ffa0;
+        font-weight: bold;
+        color: rgb(5, 5, 5);
+        border-bottom-left-radius: 15px;
+      }
+
+      .layout-button:hover {
+        background: rgb(220, 255, 22);
+        color: rgb(24, 23, 23);
+      }
+
+      .layout-buttonAcessibilidade:hover {
+        background: rgb(220, 255, 22);
+        color: rgb(24, 23, 23);
+      }
+
+      .reset-button {
+        width: 110px;
+        height: auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        border: none;
+        background-color: #252525;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        border-bottom-right-radius: 15px;
+      }
+
+      .reset-button:hover {
+        background: rgb(220, 255, 22);
+        color: #252525;
+      }
+
+      .reset-buttonAcessibilidade {
+        width: 110px;
+        height: auto;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        border: none;
+        background-color: #252525;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        border-bottom-right-radius: 15px;
+      }
+
+      .reset-buttonAcessibilidade:hover {
+        background: rgb(220, 255, 22);
+        color: #252525;
+      }
+
+      #titulo-quem-somos {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 30px;
+        font-weight: bolder;
+        color: rgb(255, 255, 255);
+        margin-top: 100px;
+        margin-left: 600px;
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
+
+      .td-quem-somos {
+        text-align: left;
+        margin: 15px;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 18px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .td-quem-somosAcessibilidade {
+        text-align: left;
+        margin: 15px;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 23px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .section-quem-somos {
+        line-height: 25px;
+        margin-top: -280px;
+        padding-bottom: 250px;
+        margin-left: 410px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .img-alunos {
+        height: 140px;
+        width: 140px;
+        display: flex;
+        display: inline;
+        justify-content: space-around;
+        margin: 60px;
+        margin-top: -138px;
+      }
+
+      .img-alunosAcessibilidade {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        display: inline;
+        justify-content: space-around;
+        margin: 30px;
+        margin-top: -138px;
+      }
+    </style>
+  </head>
+  <body id="corpo">
+    <div class="container" id="container1">
+      <div class="botao-layout" id="botao-layout2">
+        <button
+          type="button"
+          id="layoutNovo"
+          class="layout-button"
+          onclick="troca(1)"
+        >
+          layout
+        </button>
+        <button
+          type="button"
+          id="resetLayout"
+          class="reset-button"
+          onclick="troca(2)"
+        >
+          reset
+        </button>
+      </div>
+
+      <div id="conteudoPrincipal" class="primeira">
+        <h1 id="titulo">Damaris, Roberto, Leonardo.</h1>
+
+        <div id="titulo2">
+          <h2 id="tituloh2">
+            Cotações: Câmbio, conversor de<br />
+            moedas. Calculadora Simples e<br />
+            Científica.
+          </h2>
+        </div>
+
+        <div id="divP">
+          <p id="texto">
+            Nossa página foi pensada e desenvoldida por nós do grupo<br />
+            RoldCoders, criamos em colaboração e agregando nossas skills
+            individuais,<br />
+            um ambiente agradável e prático para atender<br />
+            suas necessidades financeiras.
+            <br />
+            <br />
+            Converta quanto quiser em 6 tipos de moedas diferentes, aproveite<br />
+            a calculadora simples e científica e não se esqueça de se
+            cadastrar<br />
+            no nosso site!
+          </p>
+        </div>
+
+        <table>
+          <tr>
+            <td class="td-img" style="height: 20px">
+              <img id="img-moeda" class="crop" src="imagens/calculadora.svg" />
+            </td>
+            <td class="td-img">
+              <img id="img-moeda" src="imagens/dinheiro.svg" />
+            </td>
+            <td class="td-img">
+              <img id="img-moeda" src="imagens/formulario-de-contato.svg" />
+            </td>
+          </tr>
+
+          <tr>
+            <form
+              action="pagSecundarias/calculadora/calculadoraFinal.html"
+              method="get"
+              target="_blank"
+            >
+              <td class="td-botao">
+                <button id="botao0" type="submit" class="button">
+                  Calculadoras
+                </button>
+              </td>
+            </form>
+
+            <form
+              action="pagSecundarias/currency/currency.html"
+              method="get"
+              target="_blank"
+            >
+              <td class="td-botao">
+                <button id="botao1" type="submit" class="button">
+                  Conversor
+                </button>
+              </td>
+            </form>
+
+            <form
+              action="pagSecundarias/cadastro/cadastro.html"
+              method="get"
+              target="_blank"
+            >
+              <td class="td-botao">
+                <button id="botao2" type="submit" class="button">
+                  Formulário
+                </button>
+              </td>
+            </form>
+          </tr>
+        </table>
+      </div>
+
+      <div id="acess1">
+        <button id="acess" onclick="acessibilidade(1)" type="button">
+          <img src="imagens/lupa.svg" style="width: 29px; height: auto" />
+        </button>
+      </div>
+
+      <div>
+        <section id="quem-somos-section" style="padding-bottom: 500px">
+          <h1 id="titulo-quem-somos">Quem somos</h1>
+        </section>
+
+        <section class="section-quem-somos">
+          <table>
+            <tr>
+              <td>
+                <img class="img-alunos" id="imgLeo" src="imagens/leo.png" />
+              </td>
+              <td>
+                <img class="img-alunos" id="imgDam" src="imagens/damaris.png" />
+              </td>
+              <td>
+                <img
+                  class="img-alunos"
+                  id="imgRoberto"
+                  src="imagens/roberto.png"
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td id="leo" class="td-quem-somos">
+                Leonardo, é formado em Matemática Aplicada pela FURG. Vêm
+                estudando desenvolvimento Web Full Stack com ênfase em back-end.
+                Seu interesse em programação surgiu durante o desenvolvimento do
+                TCC no qual utilizou Python.
+              </td>
+
+              <td id="damaris" class="td-quem-somos">
+                Damaris, graduanda em Análise e Desenvolvimento de Sistemas.
+                Aprimorando conhecimentos em desenvolvimento Web, ênfase, HTML,
+                CSS e JavaScript. Busco sempre estar aprendendo novas
+                tecnologias importantes para o mercado.
+              </td>
+
+              <td id="roberto" class="td-quem-somos">
+                Roberto, 53 anos, separado, 3 filhos. Formação técnica em
+                mecânica, aluno em período integral da SoulCode Academy,
+                cursando ADS Senac no modo EAD. Realizando um objetivo de vida,
+                trabalhar com algo que sempre foi um hobby, desenvolvimento de
+                sistema e Web Full Stack.
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <!-- <script src="home.js"></script>-->
+    <script>
+      function troca(escolha) {
+        if (escolha == 1)
+          document.getElementById("container1").className = "estilo1";
+        else if (escolha == 2) {
+          document.getElementById("container1").className = "estilo-reset";
+
+          // const cria uma variavel com escopo local
+          const tituloreset = document.getElementById("tituloAcessibilidade");
+          tituloreset.removeAttribute("id");
+          tituloreset.setAttribute("id", "titulo");
+
+          const tituloh2 = document.getElementById("tituloh2Acessibilidade");
+          tituloh2.removeAttribute("id");
+          tituloh2.setAttribute("id", "tituloh2");
+
+          const textoreset = document.getElementById("textoAcessibilidade");
+          textoreset.removeAttribute("id");
+          textoreset.setAttribute("id", "texto");
+
+          const layoutNovo = document.getElementById("layoutNovo");
+          layoutNovo.classList.remove("layout-buttonAcessibilidade");
+          layoutNovo.classList.add("layout-button");
+
+          const layoutReset = document.getElementById("resetLayout");
+          layoutReset.classList.remove("reset-buttonAcessibilidade");
+          layoutReset.classList.add("reset-button");
+
+          const botaoreset = document.getElementById("botao0");
+          botaoreset.classList.remove("buttonAcessibilidade");
+          botaoreset.classList.add("button");
+
+          const botao1reset = document.getElementById("botao1");
+          botao1reset.classList.remove("buttonAcessibilidade");
+          botao1reset.classList.add("button");
+
+          const botao2reset = document.getElementById("botao2");
+          botao2reset.classList.remove("buttonAcessibilidade");
+          botao2reset.classList.add("button");
+
+          const primeira = document.getElementById("conteudoPrincipal");
+          primeira.classList.remove("primeiraAcessibilidade");
+          primeira.classList.add("primeira");
+
+          const damaris = document.getElementById("damaris");
+          damaris.classList.remove("td-quem-somosAcessibilidade");
+          damaris.classList.add("td-quem-somos");
+
+          const leo = document.getElementById("leo");
+          leo.classList.remove("td-quem-somosAcessibilidade");
+          leo.classList.add("td-quem-somos");
+
+          const roberto = document.getElementById("roberto");
+          roberto.classList.remove("td-quem-somosAcessibilidade");
+          roberto.classList.add("td-quem-somos");
+
+          const damarisImg = document.getElementById("imgDam");
+          damarisImg.classList.remove("img-alunosAcessibilidade");
+          damarisImg.classList.add("img-alunos");
+
+          const leoImg = document.getElementById("imgLeo");
+          leoImg.classList.remove("img-alunosAcessibilidade");
+          leoImg.classList.add("img-alunos");
+
+          const robertoImg = document.getElementById("imgRoberto");
+          robertoImg.classList.remove("img-alunosAcessibilidade");
+          robertoImg.classList.add("img-alunos");
+        }
+      }
+
+      function acessibilidade(acessibilidade) {
+        // tranformar o titulo para modo acessibilidade
+        const titulo = document.getElementById("titulo");
+        titulo.removeAttribute("id"); // remove a id titulo
+        titulo.setAttribute("id", "tituloAcessibilidade"); // adicionar a id tituloAcessibilidade
+
+        const texto = document.getElementById("texto");
+        texto.removeAttribute("id");
+        texto.setAttribute("id", "textoAcessibilidade");
+
+        const layoutNovo = document.getElementById("layoutNovo");
+        layoutNovo.classList.remove("layout-button");
+        layoutNovo.classList.add("layout-buttonAcessibilidade");
+
+        const layoutReset = document.getElementById("resetLayout");
+        layoutReset.classList.remove("reset-button");
+        layoutReset.classList.add("reset-buttonAcessibilidade");
+
+        const tituloh2 = document.getElementById("tituloh2");
+        tituloh2.removeAttribute("id");
+        tituloh2.setAttribute("id", "tituloh2Acessibilidade");
+
+        const botao = document.getElementById("botao0");
+        botao.classList.remove("button");
+        botao.classList.add("buttonAcessibilidade");
+
+        const botao1 = document.getElementById("botao1");
+        botao1.classList.remove("button");
+        botao1.classList.add("buttonAcessibilidade");
+
+        const botao2 = document.getElementById("botao2");
+        botao2.classList.remove("button");
+        botao2.classList.add("buttonAcessibilidade");
+
+        const primeira = document.getElementById("conteudoPrincipal");
+        primeira.classList.remove("primeira");
+        primeira.classList.add("primeiraAcessibilidade");
+
+        const damarisImg = document.getElementById("imgDam");
+        damarisImg.classList.remove("img-alunos");
+        damarisImg.classList.add("img-alunosAcessibilidade");
+
+        const leoImg = document.getElementById("imgLeo");
+        leoImg.classList.remove("img-alunos");
+        leoImg.classList.add("img-alunosAcessibilidade");
+
+        const robertoImg = document.getElementById("imgRoberto");
+        robertoImg.classList.remove("img-alunos");
+        robertoImg.classList.add("img-alunosAcessibilidade");
+
+        const damaris = document.getElementById("damaris");
+        damaris.classList.remove("td-quem-somos");
+        damaris.classList.add("td-quem-somosAcessibilidade");
+
+        const leo = document.getElementById("leo");
+        leo.classList.remove("td-quem-somos");
+        leo.classList.add("td-quem-somosAcessibilidade");
+
+        const roberto = document.getElementById("roberto");
+        roberto.classList.remove("td-quem-somos");
+        roberto.classList.add("td-quem-somosAcessibilidade");
+      }
+    </script>
+  </body>
+</html>

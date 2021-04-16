@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        background-image: url(../../imagens/Design.png);
+        height: 100%;
+      }
+
+      body {
+        position: absolute;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      #container {
+        /* Faz a calculadora sumir */
+        display: none;
+      }
+
+      #input {
+        border-radius: 3px;
+        border: solid 1px black;
+        width: 235px;
+        height: 30px;
+        margin-left: 5px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        margin-bottom: 10px;
+      }
+
+      .calculadora {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin-left: 500px;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .botao {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .botao:hover {
+        background-color: rgb(187, 187, 187);
+      }
+
+      #titulo {
+        text-align: center;
+        margin: 5px;
+        padding-bottom: 5px;
+        font-size: 27px;
+      }
+
+      /* acrescentei esses estilos */
+      .botaoLink a {
+        color: #000;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      #calc {
+          margin: 4px;
+        padding: 10px;
+        border:none;
+        border-radius: 35px;
+        background-color: #ffdf2b;
+        position: relative;
+        top: 450px;
+        left: 940px;
+        font-weight: bold;
+       
+      }
+
+     
+
+      #calc:hover,
+      #calc a:hover,
+      #retorno:hover,
+      #retorno a:hover {
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* CALCULADORA CIENTIFICA */
+      
+      #containerCient {
+        /* Faz a calculadora cientifica sumir */
+        display: none;
+      }
+
+      #inputCient {
+        border-radius: 3px;
+        border: solid 1px black;
+        width: 282px;
+        height: 30px;
+        margin-left: 5px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        margin-bottom: 10px;
+      }
+
+      .calculadoraCient {
+        position: absolute;
+        background-color: rgba(251, 255, 0, 0.856);
+        margin-left: 500px;
+        margin-top: -10px;
+        border-radius: 10px;
+        padding: 15px;
+      }
+
+      .botaoCient {
+        width: 55px;
+        height: 55px;
+        /*64px*/
+        margin: 5px;
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      .botaoCient:hover {
+        background-color: rgb(187, 187, 187);
+      }
+
+      #tituloCient {
+        text-align: center;
+        margin: 5px;
+        font-size: 26px;
+        padding-bottom: 8px;
+      }
+
+      /* acrescentei esses estilos */
+      .botaoLinkCient a {
+        color: #000;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      #calcCient {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        background-color: #ffdf2b;
+
+        position: relative;
+        top: 450px;
+        left: 940px;
+      }
+
+      #retornoCient {
+        padding: 10px;
+        position: relative;
+        top: 490px;
+        left: 1000px;
+        border: 1px solid #000;
+        border-radius: 35px;
+        background-color: #ffdf2b;
+      }
+
+      #calcCient:hover,
+      #calcCient a:hover,
+      #retornoCient:hover,
+      #retornoCient a:hover {
+        background-color: #000;
+        color: #fff;
+      }
+
+      #botao-pagina-inicial{
+        
+        background-color: #79ffa0;
+        position: absolute;
+        width: 100px;
+        height: 25px;
+        padding-left: 2px; 
+        
+        border-bottom-right-radius: 30px;
+        border: none; }
+
+        a#botao-pagina-inicial{
+           text-decoration: none;
+           font-weight: bold;
+           font-size: 15px;
+           color: rgb(16, 16, 17);
+    
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- 2.Pagina de Calculadora
+    A.O usuário pode selecionar o modelo para utilizar, o outro modelo tem que ficar 
+    indisponível(Simples e Científica)
+    B. ambas funcionais se habilitada ( Escolher habilitar por botão)
+    C. A científica deve ter as mesma funcionalidades da simples adicionando:
+    Raiz quadrada , elevado a 2 , elevado a 3 e numero Pi. -->
+
+            <!--botao pag principal-->
+    <a id="botao-pagina-inicial" href="../../homeF.html">Retornar</a>
+
+
+    <div class="container" id="container" >
+      <div class="calculadora">
+        <h1 id="titulo">Calculadora</h1>
+
+        <p id="input"></p>
+
+        <table>
+          <tr>
+            <td><button class="botao" onclick="limparInput()">C</button></td>
+            <td><button class="botao" onclick="back()">&#60;</button></td>
+            <td><button class="botao" onclick="insert('/')">/</button></td>
+            <td><button class="botao" onclick="insert('*')">*</button></td>
+          </tr>
+
+          <tr>
+            <td><button class="botao" onclick="insert('7')">7</button></td>
+            <td><button class="botao" onclick="insert('8')">8</button></td>
+            <td><button class="botao" onclick="insert('9')">9</button></td>
+            <td><button class="botao" onclick="insert('-')">-</button></td>
+          </tr>
+
+          <tr>
+            <td><button class="botao" onclick="insert('4')">4</button></td>
+            <td><button class="botao" onclick="insert('5')">5</button></td>
+            <td><button class="botao" onclick="insert('6')">6</button></td>
+            <td><button class="botao" onclick="insert('+')">+</button></td>
+          </tr>
+
+          <tr>
+            <td><button class="botao" onclick="insert('1')">1</button></td>
+            <td><button class="botao" onclick="insert('2')">2</button></td>
+            <td><button class="botao" onclick="insert('3')">3</button></td>
+            <td rowspan="2">
+              <button
+                onclick="calcular()"
+                onblur="apagaResultado()"
+                style="height: 109px; width: 50px; margin-left: 5px"
+              >
+                =
+              </button>
+            </td>
+            <!--Coloquei um novo atributo onblur -->
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button
+                onclick="insert('0')"
+                style="width: 109px; margin-left: 5px"
+                class="botao"
+              >
+                0
+              </button>
+            </td>
+            <td><button class="botao" onclick="insert('.')">.</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <!--  criei dois botões -->
+      <button id="calc" type="button" onclick="adicionaDisplayCient()" class="botaoLink">
+        Calculadora Cientifica 
+      </button>
+    </div>
+
+    <!-- CALCULADORA CIENTIFICA -->
+
+    <div class="containerCient" id="containerCient">
+      <div class="calculadoraCient">
+        <h1 id="tituloCient">Calculadora científica</h1>
+
+        <p id="inputCient"></p>
+
+        <table>
+          <tr>
+            <td><button class="botaoCient" onblur="apagaResultadoCient()" onclick="raizCient()">√</button></td>
+            <td><button class="botaoCient" onblur="apagaResultadoCient()" onclick="piCient()">π</button></td>
+            <td><button class="botaoCient" onblur="apagaResultadoCient()" onclick="elevadoCient(2)">x2</button></td>
+            <td><button class="botaoCient" onblur="apagaResultadoCient()" onclick="elevadoCient(3)">x3</button></td>
+          </tr>
+
+          <tr>
+            <td>
+              <button class="botaoCient" onclick="limparInputCient()">C</button>
+            </td>
+            <td><button class="botaoCient" onclick="backCient()">&#60;</button></td>
+            <td><button class="botaoCient" onclick="insertCient('/')">/</button></td>
+            <td><button class="botaoCient" onclick="insertCient('*')">*</button></td>
+          </tr>
+
+          <tr>
+            <td><button class="botaoCient" onclick="insertCient('7')">7</button></td>
+            <td><button class="botaoCient" onclick="insertCient('8')">8</button></td>
+            <td><button class="botaoCient" onclick="insertCient('9')">9</button></td>
+            <td><button class="botaoCient" onclick="insertCient('-')">-</button></td>
+          </tr>
+
+          <tr>
+            <td><button class="botaoCient" onclick="insertCient('4')">4</button></td>
+            <td><button class="botaoCient" onclick="insertCient('5')">5</button></td>
+            <td><button class="botaoCient" onclick="insertCient('6')">6</button></td>
+            <td><button class="botaoCient" onclick="insertCient('+')">+</button></td>
+          </tr>
+
+          <tr>
+            <!-- Acrescentei o onblur-->
+            <td><button class="botaoCient" onclick="insertCient('1')">1</button></td>
+            <td><button class="botaoCient" onclick="insertCient('2')">2</button></td>
+            <td><button class="botaoCient" onclick="insertCient('3')">3</button></td>
+            <td rowspan="2">
+              <button
+                onclick="calcularCient()"
+                onblur="apagaResultadoCient()"
+                style="height: 141px; width: 55px; margin-left: 5px"
+              >
+                =
+              </button>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <button
+                onclick="insertCient('0')"
+                style="width: 150px; margin-left: 5px"
+                class="botaoCient"
+              >
+                0
+              </button>
+            </td>
+            <td><button class="botaoCient" onclick="insertCient('.')">.</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div>
+        <!--  criei dois botões -->
+        
+        <button id="calc" onclick="adicionaDisplay()" type="button" class="botaoLink">
+          Calculadora Comum
+        </button>
+      </div>
+    
+    </div>
+
+    <script src="calculadora.js"></script>
+  </body>
+</html>
